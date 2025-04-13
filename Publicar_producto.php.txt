@@ -1,0 +1,24 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = $_POST['nombre'];
+    $descripcion = $_POST['descripcion'];
+    $precio = $_POST['precio'];
+
+    // Aquí puedes agregar el código para almacenar los datos en una base de datos (MySQL)
+    // Ejemplo con MySQL (requiere conexión y base de datos previamente configurada)
+    /*
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    if ($conn->connect_error) {
+        die("Conexión fallida: " . $conn->connect_error);
+    }
+    $sql = "INSERT INTO productos (nombre, descripcion, precio) VALUES ('$nombre', '$descripcion', '$precio')";
+    if ($conn->query($sql) === TRUE) {
+        echo "Producto publicado con éxito";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+    $conn->close();
+    */
+    echo "Producto: $nombre publicado con éxito. Descripción: $descripcion, Precio: $precio";
+}
+?>
